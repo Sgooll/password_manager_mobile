@@ -3,7 +3,7 @@ import 'package:password_manager/src/config/colors.dart';
 import 'package:password_manager/src/feature/passwords/widgets/password_details.dart';
 import 'package:password_manager/src/utils/extensions/context.dart';
 
-import '../../../config/constants.dart';
+import '../../../config/constants/ui_constants.dart';
 import '../../../utils/modals/modals.dart';
 
 class PasswordCard extends StatelessWidget {
@@ -14,7 +14,7 @@ class PasswordCard extends StatelessWidget {
     return GestureDetector(
       onTap: () => Modals.showModal(context, child: const PasswordDetailsWidget()),
       child: Container(
-        padding: AppConstants.fullEdgeInsets,
+        padding: UiConstants.fullEdgeInsets,
         margin: const EdgeInsets.only(bottom: 5), //TODO constant
         decoration: BoxDecoration(
           color: AppColors.primaryColor,

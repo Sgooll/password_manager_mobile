@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppConstants {
+class UiConstants {
   static const iconSize = 20.0;
 
   static const kHorizontalPadding = 10.0;

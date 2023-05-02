@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:password_manager/src/config/constants.dart';
+import 'package:password_manager/src/config/constants/ui_constants.dart';
 import 'package:password_manager/src/utils/extensions/context.dart';
 
 import '../../utils/haptics.dart';
@@ -50,7 +50,7 @@ class QrPage extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => context.router.pop(),
                 child: Padding(
-                  padding: AppConstants.fullEdgeInsets,
+                  padding: UiConstants.fullEdgeInsets,
                   child: Icon(Icons.close),
                 ),
               )

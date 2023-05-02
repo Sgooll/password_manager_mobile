@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:password_manager/src/config/constants.dart';
+import 'package:password_manager/src/config/constants/ui_constants.dart';
 
 import 'colors.dart';
 
@@ -17,7 +17,7 @@ class AppTheme {
 
     iconTheme: const IconThemeData(
       color: Colors.white,
-      size: AppConstants.iconSize,
+      size: UiConstants.iconSize,
     ),
 
     appBarTheme: AppBarTheme(

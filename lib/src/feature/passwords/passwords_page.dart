@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:password_manager/src/config/constants.dart';
+import 'package:password_manager/src/config/constants/ui_constants.dart';
 import 'package:password_manager/src/core/routes/routes.gr.dart';
 import 'package:password_manager/src/feature/components/draggable/draggable.dart';
 import 'package:password_manager/src/feature/passwords/widgets/add_password.dart';
@@ -23,7 +23,7 @@ class PasswordsPage extends StatelessWidget {
           GestureDetector(
             onTap: () => _onScan(context),
             child: const Padding(
-              padding: AppConstants.fullEdgeInsets,
+              padding: UiConstants.fullEdgeInsets,
               child: Icon(Icons.qr_code),
             ),
           )
@@ -35,8 +35,8 @@ class PasswordsPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
-            horizontal: AppConstants.kHorizontalPadding,
-            vertical: AppConstants.kVerticalPadding),
+            horizontal: UiConstants.kHorizontalPadding,
+            vertical: UiConstants.kVerticalPadding),
         child: ListView.builder(
             itemCount: 10,
             itemBuilder: (context, index) {

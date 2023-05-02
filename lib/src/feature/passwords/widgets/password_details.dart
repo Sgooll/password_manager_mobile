@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:password_manager/src/config/constants.dart';
+import 'package:password_manager/src/config/constants/ui_constants.dart';
 import 'package:password_manager/src/utils/extensions/context.dart';
 
 class PasswordDetailsWidget extends StatelessWidget {
@@ -10,7 +10,7 @@ class PasswordDetailsWidget extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: context.heightPx / 2,
-      padding: AppConstants.fullEdgeInsets,
+      padding: UiConstants.fullEdgeInsets,
       color: context.theme.scaffoldBackgroundColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

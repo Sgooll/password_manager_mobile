@@ -4,7 +4,7 @@ import 'package:flutter/physics.dart';
 import 'package:password_manager/src/utils/extensions/context.dart';
 
 import '../../../config/colors.dart';
-import '../../../config/constants.dart';
+import '../../../config/constants/ui_constants.dart';
 import '../../../utils/haptics.dart';
 
 class DraggableItemWidget extends StatefulWidget {
