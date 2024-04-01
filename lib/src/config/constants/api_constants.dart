@@ -1,5 +1,5 @@
 class ApiConstants {
 
-  static const domain = '95.182.121.247:8080';
+  static const domain = 'localhost:8080';
 
 }

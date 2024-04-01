@@ -1,7 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:password_manager/src/config/constants/api_constants.dart';
 import 'package:password_manager/src/config/constants/ui_constants.dart';
 import 'package:password_manager/src/core/routes/routes.gr.dart';
+import 'package:password_manager/src/data/repository/main.dart';
 import 'package:password_manager/src/feature/components/draggable/draggable.dart';
 import 'package:password_manager/src/feature/passwords/widgets/add_password.dart';
 import 'package:password_manager/src/feature/passwords/widgets/password_card.dart';
@@ -40,8 +43,7 @@ class PasswordsPage extends StatelessWidget {
         child: ListView.builder(
             itemCount: 10,
             itemBuilder: (context, index) {
-              return DraggableItemWidget(
-              child: const PasswordCard());
+              return DraggableItemWidget(child: const PasswordCard());
             }),
       ),
     );
@@ -52,10 +54,35 @@ class PasswordsPage extends StatelessWidget {
 
     final status = await Permission.camera.request();
 
+    print(status);
+
     if (status.isDenied || status.isPermanentlyDenied || status.isRestricted) {
       return;
     } else {
-      context.router.push(QrRoute(parentContext: context));
+      final result = await context.router.push(QrRoute(parentContext: context));
+
+      print(result is Barcode);
+      if (result is! Barcode) {
+        return;
+      }
+
+      print(result.rawValue);
+
+      if (result.rawValue == null) {
+        return;
+      }
+
+      final splitted = result.rawValue!.split(':');
+
+
+      // ApiRepository.rawCall(
+      //   requestPath: 'http://${ApiConstants.domain}/password/join',
+      //
+      //   args: {
+      //     "address": splitted[0],
+      //     "port": splitted[1],
+      //   },
+      // );
     }
   }
 }

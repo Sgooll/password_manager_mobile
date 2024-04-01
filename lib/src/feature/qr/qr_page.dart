@@ -24,6 +24,7 @@ class QrPage extends StatelessWidget {
                 onDetect:
                     (Barcode barcode, MobileScannerArguments? args) async {
                   AppHaptics.buttonPress();
+                  context.router.pop(barcode);
                 }),
             ClipPath(
               clipper: BarcodeClipper(),

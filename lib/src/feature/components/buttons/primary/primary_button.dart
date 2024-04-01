@@ -1,7 +1,7 @@
-import 'package:erpl_ui/src/utils/extensions/context.dart';
 import 'package:flutter/material.dart';
+import 'package:password_manager/src/utils/extensions/context.dart';
 
-import '../../../config/colors/colors.dart';
+import '../../../../config/colors.dart';
 import '../../loading/loading_widget.dart';
 import 'primary_button_controller.dart';
 
@@ -112,8 +112,8 @@ class _PrimaryButtonState extends State<PrimaryButton> {
                                 context.theme.textTheme.bodyLarge?.copyWith(
                                     color: widget.secondary ? context.theme
                                         .scaffoldBackgroundColor ==
-                                        AppColors.white ? context.theme
-                                        .primaryColor : AppColors.white : AppColors.white)),
+                                        Colors.white ? context.theme
+                                        .primaryColor : Colors.white : Colors.white)),
                       )
                           : widget.icon ?? const SizedBox(),
                     ),

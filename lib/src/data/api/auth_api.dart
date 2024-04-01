@@ -1,6 +1,6 @@
 abstract class AuthApi {
 
-  String loginAddress = 'auth/sign-in';
+  String loginAddress = 'auth/login';
   Future<String?> login();
 
 }
